@@ -17,7 +17,7 @@ My attempt to replicate unbreakable-ctf-s2e on a google-ctf-2016 challenge linke
 
 ## Overview<a name="overview"></a>
 
-  - 
+  - There is no obvious failure address to include
 
 ## Future<a name="future"></a>
 
