@@ -13,11 +13,12 @@
 
 ## Introduction<a name="introduction"></a>
 
-Followed tutorial from https://adrianherrera.github.io/post/google-ctf-2016/. The motivation is that I'm not sure what the end goal of analyzing malware is so I thought solving CTF problems would be more straightfoward.
+Followed tutorial from https://adrianherrera.github.io/post/google-ctf-2016/. The motivation is that I'm not sure what the end goal of analyzing malware is so I thought solving CTF problems would be more straightfoward. I think this would be good practice on writing plugins for S2E.
 
 
 ## Overview<a name="overview"></a>
 
+  -
 
 ## Future<a name="future"></a>
 
