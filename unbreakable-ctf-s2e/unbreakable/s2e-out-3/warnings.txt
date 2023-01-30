@@ -1,0 +1,1 @@
+Terminating node id 0 (instance slot 0)

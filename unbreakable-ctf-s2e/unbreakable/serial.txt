@@ -1,0 +1,19 @@
+Waiting for S2E mode...
+... S2E mode detected
+... file guest-tools64/s2ecmd of size 2720624 was transferred successfully to /home/s2e/s2ecmd
+Waiting for S2E mode...
+... S2E mode detected
+... file guest-tools64/s2eget of size 24336 was transferred successfully to /home/s2e/s2eget
+Waiting for S2E mode...
+... S2E mode detected
+... file guest-tools64/s2eput of size 24832 was transferred successfully to /home/s2e/s2eput
+Waiting for S2E mode...
+... S2E mode detected
+... file guest-tools32/s2e.so of size 121292 was transferred successfully to guest-tools32/s2e.so
+Waiting for S2E mode...
+... S2E mode detected
+... file guest-tools64/s2e.so of size 127144 was transferred successfully to guest-tools64/s2e.so
+debug.exception-trace = 0
+Waiting for S2E mode...
+... S2E mode detected
+... file unbreakable of size 19088 was transferred successfully to /home/s2e/unbreakable

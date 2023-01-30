@@ -1,11 +1,3 @@
-///
-/// Copyright (C) 2017, Dependable Systems Laboratory, EPFL
-/// All rights reserved.
-///
-/// Copy this file to source/s2e/libs2eplugins/src/s2e/Plugins in your S2E
-/// environment.
-///
-
 #include <s2e/S2E.h>
 
 #include <s2e/Plugins/OSMonitors/Support/ProcessExecutionDetector.h>
@@ -39,8 +31,7 @@ void GoogleCTFUnbreakable::initialize() {
 }
 
 void GoogleCTFUnbreakable::onSymbolicVariableCreation(S2EExecutionState *state, const std::string &name,
-                                                      const std::vector<klee::ref<klee::Expr>> &expr,
-                                                      const klee::MemoryObject *mo, const klee::Array *array) {
+                                                      const std::vector<klee::ref<klee::Expr>> &expr, const klee::ArrayPtr &array) {
     // This check is not strictly required, because we only have one symbolic variable in the analysis.
     //
     // Program arguments made symbolic with the S2E_SYM_ARGS environment variable always have the name "argX", where
@@ -50,10 +41,15 @@ void GoogleCTFUnbreakable::onSymbolicVariableCreation(S2EExecutionState *state, 
     }
 
     // We know that the product activation key starts with "CTF{". We encode this information as KLEE constraints
-    state->constraints.addConstraint(E_EQ(expr[0], E_CONST('C', klee::Expr::Int8)));
-    state->constraints.addConstraint(E_EQ(expr[1], E_CONST('T', klee::Expr::Int8)));
-    state->constraints.addConstraint(E_EQ(expr[2], E_CONST('F', klee::Expr::Int8)));
-    state->constraints.addConstraint(E_EQ(expr[3], E_CONST('{', klee::Expr::Int8)));
+    bool success = true;
+    success = success && state->addConstraint(E_EQ(expr[0], E_CONST('C', klee::Expr::Int8)), true);
+    success = success && state->addConstraint(E_EQ(expr[1], E_CONST('T', klee::Expr::Int8)), true);
+    success = success && state->addConstraint(E_EQ(expr[2], E_CONST('F', klee::Expr::Int8)), true);
+    success = success && state->addConstraint(E_EQ(expr[3], E_CONST('{', klee::Expr::Int8)), true);
+    
+    if(!success){
+    	exit(0);
+    }
 
     // The following code has been removed because it has varying effects on S2E's performance. For example,
     // constraining that all other characters must be non-NULL slightly improves performance. However,
@@ -94,7 +90,7 @@ void GoogleCTFUnbreakable::onSuccess(S2EExecutionState *state, uint64_t pc) {
     std::vector<std::pair<std::string, std::vector<unsigned char>>> results;
 
     // Invoke the constraint solver
-    if (!s2e()->getExecutor()->getSymbolicSolution(*state, results)) {
+    if (!state->getSymbolicSolution(results)) {
         getWarningsStream(state) << "Unable to generate a solution for the product activation code\n";
         exit(1);
     }
@@ -122,7 +118,7 @@ void GoogleCTFUnbreakable::onFailure(S2EExecutionState *state, uint64_t pc) {
     }
 
     // There is no reason to continue execution any further. So kill the state
-    s2e()->getExecutor()->terminateStateEarly(*state, "Invalid path");
+    s2e()->getExecutor()->terminateState(*state, "Invalid path");
 }
 
 } // namespace plugins
