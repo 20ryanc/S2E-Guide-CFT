@@ -17,7 +17,7 @@ Followed tutorial from http://s2e.systems/docs/EquivalenceTesting.html. S2e has 
 
 ## Overview<a name="overview"></a>
 
-Two Factorial functions where compared in Equivalence testing. The intent is for the factorial function with parameter ##x## and ##max## to return x! or if x >= max return max! as to avoid overflow. The first factorial function uses a for loop and does everything as intended. The second factorial function will return max if x > max instead of x! and will return 0 if x = 0, which is incorrect. In equivalence testing, there were two test cases that made it fail. First when x = 0, and second when x = (int64_t) -9223372036854775808 which is a very big number when unsigned, which mostly covered cases where it would fail.
+Two Factorial functions where compared in Equivalence testing. The intent is for the factorial function with parameter **x** and **max** to return x! or if x >= max return max! as to avoid overflow. The first factorial function uses a for loop and does everything as intended. The second factorial function will return max if x > max instead of x! and will return 0 if x = 0, which is incorrect. In equivalence testing, there were two test cases that made it fail. First when x = 0, and second when x = (int64_t) -9223372036854775808 which is a very big number when unsigned, which mostly covered cases where it would fail.
 
 ## Future<a name="future"></a>
 
