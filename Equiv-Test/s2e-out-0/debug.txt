@@ -1,0 +1,395 @@
+Revision: 17c319d3ea5ecba4338c03f0d6673007ec51d7da
+Config date: Tue 04 Jan 2022 12:07:14 AM EST
+
+Current data layout: e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128
+Current target triple: x86_64-unknown-linux-gnu
+Creating plugin CorePlugin
+Creating plugin BaseInstructions
+Creating plugin HostFiles
+Creating plugin Vmi
+Creating plugin MemUtils
+Creating plugin WebServiceInterface
+Creating plugin ExecutionTracer
+Creating plugin ModuleTracer
+Creating plugin KeyValueStore
+Creating plugin TranslationBlockCoverage
+Creating plugin ModuleExecutionDetector
+Creating plugin ForkLimiter
+Creating plugin ProcessExecutionDetector
+Creating plugin ModuleMap
+Creating plugin MemoryMap
+Creating plugin MultiSearcher
+Creating plugin CUPASearcher
+Creating plugin StaticFunctionModels
+Creating plugin TestCaseGenerator
+Creating plugin Screenshot
+Creating plugin LinuxMonitor
+Creating plugin LuaBindings
+Creating plugin LuaCoreEvents
+Initializing LuaBindings
+Initializing LuaCoreEvents
+LuaCoreEvents: Registering instrumentation for core signals
+Initializing Screenshot
+Initializing TestCaseGenerator
+Initializing MultiSearcher
+Initializing ForkLimiter
+Initializing KeyValueStore
+Initializing ExecutionTracer
+Initializing WebServiceInterface
+WebServiceInterface: SeedSearcher not present, seed statistics will not be available
+WebServiceInterface: Recipe plugin not present, recipe statistics will not be available
+Initializing Vmi
+Vmi: adding path /home/ryan/s2e/projects/factorial
+Vmi: adding path /home/ryan/s2e/images/debian-9.2.1-x86_64/guestfs
+Initializing HostFiles
+Initializing BaseInstructions
+Initializing LinuxMonitor
+Initializing ModuleMap
+Initializing ProcessExecutionDetector
+Initializing MemoryMap
+Initializing MemUtils
+Initializing ModuleExecutionDetector
+Initializing StaticFunctionModels
+StaticFunctionModels: Model count: 0
+Initializing CUPASearcher
+MultiSearcher: Registering CUPASearcher
+MultiSearcher: Switching to CUPASearcher
+CUPASearcher: CUPASearcher is now active
+Initializing TranslationBlockCoverage
+Initializing ModuleTracer
+Initializing CorePlugin
+[Z3] Initializing
+0 [State 0] Created initial state
+Initializing periodic timer
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x10000000, hostAddr = 0x7f51d3e00000, isSharedConcrete=0, name=pc.ram)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x40000, hostAddr = 0x7f51c5200000, isSharedConcrete=1, name=pc.bios)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x20000, hostAddr = 0x7f51c4e00000, isSharedConcrete=1, name=pc.rom)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x1000000, hostAddr = 0x7f51c3c00000, isSharedConcrete=1, name=vga.vram)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x10000, hostAddr = 0x7f51c2a00000, isSharedConcrete=1, name=vga.rom)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x40000, hostAddr = 0x7f51c2800000, isSharedConcrete=1, name=e1000.rom)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x20000, hostAddr = 0x7f51c2400000, isSharedConcrete=1, name=/rom@etc/acpi/tables)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x1000, hostAddr = 0x7f51c2200000, isSharedConcrete=1, name=/rom@etc/table-loader)
+Adding memory block (startAddr = 0xffffffffffffffff, size = 0x1000, hostAddr = 0x7f51c2000000, isSharedConcrete=1, name=/rom@etc/acpi/rsdp)
+1 [State 0] HostFiles: opening bootstrap.sh
+1 [State 0] HostFiles: opening guest-tools64/s2ecmd
+2 [State 0] HostFiles: opening guest-tools64/s2eget
+2 [State 0] HostFiles: opening guest-tools64/s2eput
+2 [State 0] HostFiles: opening guest-tools32/s2e.so
+2 [State 0] HostFiles: opening guest-tools64/s2e.so
+3 [State 0] LinuxMonitor: Received kernel init page_offset=0xffff880000000000 &current_task=0xffffffff820e73e0 task_struct.pid offset=1120 task_struct.tgid offset=1124
+3 [State 0] LinuxMonitor: Kernel is at address 0xffffffff81000000
+Vmi: Loading module from disk  (vmlinux)
+Vmi: Attempting to load binary file: /home/ryan/s2e/images/debian-9.2.1-x86_64/guestfs/vmlinux
+3 [State 0] LinuxMonitor: mmap pid=0x4e3 addr=0x7f34ff4d3000 size=0x41000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e2 start=0x7fe938667000 end=0x7fe938669000
+3 [State 0] LinuxMonitor: munmap pid=0x4e2 start=0x7fe938672000 end=0x7fe938673000
+3 [State 0] LinuxMonitor: munmap pid=0x4e2 start=0x7fe938671000 end=0x7fe938672000
+3 [State 0] LinuxMonitor: munmap pid=0x4e2 start=0x7fe938670000 end=0x7fe938671000
+3 [State 0] LinuxMonitor: munmap pid=0x4e2 start=0x7fe93866c000 end=0x7fe938670000
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e2, cr3=0x1e08000, exitCode=0).
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc77989a000 end=0x7fc779ab5000
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc779662000 end=0x7fc77989a000
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc779460000 end=0x7fc779662000
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc77925e000 end=0x7fc779460000
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc77bc28000 end=0x7fc77bc6e000
+3 [State 0] LinuxMonitor: munmap pid=0x4e1 start=0x7fc778e52000 end=0x7fc779056000
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e1, cr3=0x1e08000, exitCode=0).
+3 [State 0] LinuxMonitor: Process ./s2eget loaded pid=0x4e4
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x400000 size=0x1000 prot=0x1 flag=0x1812 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x401000 size=0x1000 prot=0x5 flag=0x1812 pgoff=0x1
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x402000 size=0x1000 prot=0x1 flag=0x1812 pgoff=0x2
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x403000 size=0x2000 prot=0x3 flag=0x1812 pgoff=0x2
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401c13000 size=0x226000 prot=0x5 flag=0x802 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e4 start=0x7fd401c36000 end=0x7fd401e39000
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401e36000 size=0x2000 prot=0x3 flag=0x812 pgoff=0x23
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7fd401c13000 elf_entry=0x7fd401c13000 interp_load_addr=0x7fd401c13000
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=ld-linux-x86-64.so.2 Path=/lib64/ld-linux-x86-64.so.2 Size=0x23fe0 AddressSpace=0xf29b000 Pid=0x4e4 EntryPoint=0xc20 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=s2eget Path=./s2eget Size=0x15dd AddressSpace=0xf29b000 Pid=0x4e4 EntryPoint=0x401150 Checksum=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401e2e000 size=0x75c3 prot=0x1 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401e2c000 size=0x2000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401874000 size=0x39e960 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e4 start=0x7fd401a09000 size=0x200000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e4 start=0x7fd401c09000 end=0x7fd401c0f000
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401c09000 size=0x6000 prot=0x3 flag=0x12 pgoff=0x195
+3 [State 0] LinuxMonitor: munmap pid=0x4e4 start=0x7fd401c0f000 end=0x7fd401c13000
+3 [State 0] LinuxMonitor: mmap pid=0x4e4 addr=0x7fd401c0f000 size=0x3960 prot=0x3 flag=0x32 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e4 start=0x7fd401c09000 size=0x4000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e4 start=0x403000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e4 start=0x7fd401e36000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: munmap pid=0x4e4 start=0x7fd401e2e000 end=0x7fd401e36000
+3 [State 0] HostFiles: opening factorial
+3 [State 0] LinuxMonitor: mmap pid=0x4e3 addr=0x7f34ff492000 size=0x41000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e4, cr3=0x1e08000, exitCode=0).
+3 [State 0] LinuxMonitor: Process /bin/chmod loaded pid=0x4e5
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x55b96f35f000 size=0x20f000 prot=0x5 flag=0x1802 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e5 start=0x55b96f36d000 end=0x55b96f56e000
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x55b96f56c000 size=0x2000 prot=0x3 flag=0x1812 pgoff=0xd
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e45f000 size=0x226000 prot=0x5 flag=0x802 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e5 start=0x7f967e482000 end=0x7f967e685000
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e682000 size=0x2000 prot=0x3 flag=0x812 pgoff=0x23
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7f967e45f000 elf_entry=0x7f967e45f000 interp_load_addr=0x7f967e45f000
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=ld-linux-x86-64.so.2 Path=/lib64/ld-linux-x86-64.so.2 Size=0x23fe0 AddressSpace=0xd826000 Pid=0x4e5 EntryPoint=0xc20 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=chmod Path=/bin/chmod Size=0xd7e4 AddressSpace=0xd826000 Pid=0x4e5 EntryPoint=0x55b96f361a50 Checksum=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e67a000 size=0x75c3 prot=0x1 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e678000 size=0x2000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e0c0000 size=0x39e960 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e5 start=0x7f967e255000 size=0x200000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e5 start=0x7f967e455000 end=0x7f967e45b000
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e455000 size=0x6000 prot=0x3 flag=0x12 pgoff=0x195
+3 [State 0] LinuxMonitor: munmap pid=0x4e5 start=0x7f967e45b000 end=0x7f967e45f000
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e45b000 size=0x3960 prot=0x3 flag=0x32 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e5 start=0x7f967e455000 size=0x4000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e5 start=0x55b96f56c000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e5 start=0x7f967e682000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: munmap pid=0x4e5 start=0x7f967e67a000 end=0x7f967e682000
+3 [State 0] LinuxMonitor: mmap pid=0x4e5 addr=0x7f967e4dd000 size=0x19a1a0 prot=0x1 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e5, cr3=0x1e08000, exitCode=0).
+3 [State 0] LinuxMonitor: Process ./factorial loaded pid=0x4e6
+3 [State 0] ProcessExecutionDetector: starting to track: factorial (pid: 0x4e6 as: 0xd826000)
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x55a61a07d000 size=0x5000 prot=0x1 flag=0x1802 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x55a61a07e000 end=0x55a61a082000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x55a61a07e000 size=0x1000 prot=0x5 flag=0x1812 pgoff=0x1
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x55a61a07f000 size=0x1000 prot=0x1 flag=0x1812 pgoff=0x2
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x55a61a080000 size=0x2000 prot=0x3 flag=0x1812 pgoff=0x2
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69e15000 size=0x226000 prot=0x5 flag=0x802 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69e38000 end=0x7f4d6a03b000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a038000 size=0x2000 prot=0x3 flag=0x812 pgoff=0x23
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7f4d69e15000 elf_entry=0x7f4d69e15000 interp_load_addr=0x7f4d69e15000
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=ld-linux-x86-64.so.2 Path=/lib64/ld-linux-x86-64.so.2 Size=0x23fe0 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0xc20 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=factorial Path=./factorial Size=0xf2d AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x55a61a07e060 Checksum=0x0
+3 [State 0] ModuleExecutionDetector: loading id mod_0
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a036000 size=0x2000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a02c000 size=0x9278 prot=0x1 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d6a02e000 size=0x6000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d6a02e000 end=0x7f4d6a032000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a02e000 size=0x4000 prot=0x5 flag=0x12 pgoff=0x2
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d6a032000 end=0x7f4d6a033000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a032000 size=0x1000 prot=0x1 flag=0x12 pgoff=0x6
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d6a034000 end=0x7f4d6a036000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a034000 size=0x2000 prot=0x3 flag=0x12 pgoff=0x7
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a024000 size=0x75c3 prot=0x1 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69a76000 size=0x39e960 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69c0b000 size=0x200000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69e0b000 end=0x7f4d69e11000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69e0b000 size=0x6000 prot=0x3 flag=0x12 pgoff=0x195
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69e11000 end=0x7f4d69e15000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69e11000 size=0x3960 prot=0x3 flag=0x32 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69872000 size=0x2030f0 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69875000 size=0x1ff000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69a74000 end=0x7f4d69a76000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69a74000 size=0x2000 prot=0x3 flag=0x12 pgoff=0x2
+3 [State 0] LinuxMonitor: mmap pid=0x4e3 addr=0x7f34ff451000 size=0x41000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6965a000 size=0x2171c8 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69671000 size=0x1ff000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69870000 end=0x7f4d69872000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69870000 size=0x2000 prot=0x3 flag=0x12 pgoff=0x16
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69440000 size=0x219208 prot=0x5 flag=0x2 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69459000 size=0x1ff000 prot=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69658000 end=0x7f4d6965a000
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69658000 size=0x2000 prot=0x3 flag=0x12 pgoff=0x18
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d6a022000 size=0x2000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69e0b000 size=0x4000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69658000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69870000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d69a74000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d6a034000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x55a61a080000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: mprotect pid=0x4e6 start=0x7f4d6a038000 size=0x1000 prot=0x1
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d6a024000 end=0x7f4d6a02c000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff4d3000 end=0x7f34ff514000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff492000 end=0x7f34ff4d3000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff451000 end=0x7f34ff492000
+3 [State 0] LinuxMonitor: munmap pid=0x4e0 start=0x7f34fd222000 end=0x7f34fda2f000
+3 [State 0] LinuxMonitor: munmap pid=0x4e0 start=0x7f34ff524000 end=0x7f34ff525000
+3 [State 0] LinuxMonitor: munmap pid=0x4e0 start=0x7f34ff523000 end=0x7f34ff524000
+3 [State 0] LinuxMonitor: munmap pid=0x4e0 start=0x7f34ff522000 end=0x7f34ff523000
+3 [State 0] LinuxMonitor: munmap pid=0x4e0 start=0x7f34ff51e000 end=0x7f34ff522000
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e0, cr3=0x1e08000, exitCode=0).
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34fd222000 end=0x7f34fda2f000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff524000 end=0x7f34ff525000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff523000 end=0x7f34ff524000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff522000 end=0x7f34ff523000
+3 [State 0] LinuxMonitor: munmap pid=0x4e3 start=0x7f34ff51e000 end=0x7f34ff522000
+3 [State 0] LinuxMonitor: Removing task (pid=0x4e3, cr3=0x1e08000, exitCode=0).
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Process map:
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07d000 Limit=0x55a61a07e000 Offset=0000000000 Perms=0x1 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07e000 Limit=0x55a61a07f000 Offset=0x00001000 Perms=0x5 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07f000 Limit=0x55a61a082000 Offset=0x00002000 Perms=0x3 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a6dc000 Limit=0x55a61a6fd000 Offset=0000000000 Perms=0x3 Name=[heap]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69440000 Limit=0x7f4d69459000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69658000 Limit=0x7f4d6965a000 Offset=0x00018000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6965a000 Limit=0x7f4d69671000 Offset=0000000000 Perms=0x5 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69870000 Limit=0x7f4d69872000 Offset=0x00016000 Perms=0x3 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69872000 Limit=0x7f4d69875000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69a74000 Limit=0x7f4d69a76000 Offset=0x00002000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69a76000 Limit=0x7f4d69c0b000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69e0b000 Limit=0x7f4d69e11000 Offset=0x00195000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69e15000 Limit=0x7f4d69e38000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a02c000 Limit=0x7f4d6a02e000 Offset=0000000000 Perms=0x1 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a02e000 Limit=0x7f4d6a032000 Offset=0x00002000 Perms=0x5 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a032000 Limit=0x7f4d6a033000 Offset=0x00006000 Perms=0x1 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a034000 Limit=0x7f4d6a036000 Offset=0x00007000 Perms=0x3 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a038000 Limit=0x7f4d6a03a000 Offset=0x00023000 Perms=0x3 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacae3000 Limit=0x7ffcacb04000 Offset=0000000000 Perms=0x3 Name=[stack]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacb4c000 Limit=0x7ffcacb4e000 Offset=0000000000 Perms=0x1 Name=[vvar]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacb4e000 Limit=0x7ffcacb50000 Offset=0000000000 Perms=0x5 Name=[vdso]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0xffffffffff600000 Limit=0xffffffffff601000 Offset=0000000000 Perms=0x5 Name=[vsyscall]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [heap]
+3 [State 0] LinuxMonitor: mmap pid=0x4e6 addr=0x7f4d69e85000 size=0x19d000 prot=0x3 flag=0x22 pgoff=0x0
+3 [State 0] LinuxMonitor: munmap pid=0x4e6 start=0x7f4d69e85000 end=0x7f4d6a022000
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [stack]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vvar]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vdso]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vsyscall]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Dumping modules
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /home/s2e/factorial - entry_point=0x1060 loadable_phdr_num=4
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07d000 Size=0x00001000 Offset=0x00000000 Perms=0x01 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07e000 Size=0x00001000 Offset=0x00001000 Perms=0x05 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07f000 Size=0x00003000 Offset=0x00002000 Perms=0x03 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libz.so.1.2.8 - entry_point=0x21c0 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69440000 Size=0x00019000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69658000 Size=0x00002000 Offset=0x00018000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /usr/lib/x86_64-linux-gnu/libelf-0.168.so - entry_point=0x2f90 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6965a000 Size=0x00017000 Offset=0x00000000 Perms=0x05 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69870000 Size=0x00002000 Offset=0x00016000 Perms=0x03 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libdl-2.24.so - entry_point=0xd80 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69872000 Size=0x00003000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69a74000 Size=0x00002000 Offset=0x00002000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libc-2.24.so - entry_point=0x20400 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69a76000 Size=0x00195000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69e0b000 Size=0x00006000 Offset=0x00195000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/ld-2.24.so - entry_point=0xc20 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69e15000 Size=0x00023000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a038000 Size=0x00002000 Offset=0x00023000 Perms=0x03 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /home/s2e/guest-tools64/s2e.so - entry_point=0x2410 loadable_phdr_num=4
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a02c000 Size=0x00002000 Offset=0x00000000 Perms=0x01 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a02e000 Size=0x00004000 Offset=0x00002000 Perms=0x05 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a032000 Size=0x00001000 Offset=0x00006000 Perms=0x01 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a034000 Size=0x00002000 Offset=0x00007000 Perms=0x03 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02960): Skipping /home/s2e/factorial, because it was already notified by the kernel
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=libz.so.1.2.8 Path=/lib/x86_64-linux-gnu/libz.so.1.2.8 Size=0x18ec4 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d694421c0 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=libelf-0.168.so Path=/usr/lib/x86_64-linux-gnu/libelf-0.168.so Size=0x16ef0 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d6965cf90 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=libdl-2.24.so Path=/lib/x86_64-linux-gnu/libdl-2.24.so Size=0x2314 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d69872d80 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=libc-2.24.so Path=/lib/x86_64-linux-gnu/libc-2.24.so Size=0x199998 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d69a96400 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=ld-2.24.so Path=/lib/x86_64-linux-gnu/ld-2.24.so Size=0x23fe0 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d69e15c20 Checksum=0x0
+3 [State 0] LinuxMonitor: ModuleDescriptor Name=s2e.so Path=/home/s2e/guest-tools64/s2e.so Size=0x6809 AddressSpace=0xd9e7000 Pid=0x4e6 EntryPoint=0x7f4d6a02e410 Checksum=0x0
+3 [State 0] BaseInstructions: Inserted symbolic data @0x7ffcacb02f08 of size 0x8: x='\x00\x00\x00\x00\x00\x00\x00\x00' pc=0x55a61a07e1e4
+3 [State 0] Forking state 0 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 0
+    state 1
+3 [State 0] BaseInstructions: Killing state 0
+3 [State 0] Terminating state: State was terminated by opcode
+            message: "Assertion failed: f1 == f2"
+            status: 0x0
+3 [State 0] TestCaseGenerator: generating test case at address 0x55a61a07e218
+3 [State 0] TestCaseGenerator:               v0_x_0 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 0, (string) "........"
+3 [State 0] Switching from state 0 to state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 2
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 3
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 4
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 5
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 6
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 7
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 8
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 9
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 10
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 11
+    state 1
+3 [State 1] BaseInstructions: Killing state 1
+3 [State 1] Terminating state: State was terminated by opcode
+            message: "Assertion failed: f1 == f2"
+            status: 0x0
+3 [State 1] TestCaseGenerator: generating test case at address 0x55a61a07e218
+3 [State 1] TestCaseGenerator:               v0_x_0 = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80}; (int64_t) -9223372036854775808, (string) "........"
+3 [State 1] Switching from state 1 to state 11
+4 [State 11] BaseInstructions: Killing state 11
+4 [State 11] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 11] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 11] TestCaseGenerator:               v0_x_0 = {0xa, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 10, (string) "........"
+4 [State 11] Switching from state 11 to state 10
+4 [State 10] BaseInstructions: Killing state 10
+4 [State 10] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 10] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 10] TestCaseGenerator:               v0_x_0 = {0x9, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 9, (string) "........"
+4 [State 10] Switching from state 10 to state 9
+4 [State 9] BaseInstructions: Killing state 9
+4 [State 9] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 9] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 9] TestCaseGenerator:               v0_x_0 = {0x8, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 8, (string) "........"
+4 [State 9] Switching from state 9 to state 8
+5 [State 8] BaseInstructions: Killing state 8
+5 [State 8] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 8] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 8] TestCaseGenerator:               v0_x_0 = {0x7, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 7, (string) "........"
+5 [State 8] Switching from state 8 to state 7
+5 [State 7] BaseInstructions: Killing state 7
+5 [State 7] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 7] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 7] TestCaseGenerator:               v0_x_0 = {0x6, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 6, (string) "........"
+5 [State 7] Switching from state 7 to state 6
+5 [State 6] BaseInstructions: Killing state 6
+5 [State 6] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 6] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 6] TestCaseGenerator:               v0_x_0 = {0x5, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 5, (string) "........"
+5 [State 6] Switching from state 6 to state 5
+5 [State 5] BaseInstructions: Killing state 5
+5 [State 5] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 5] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 5] TestCaseGenerator:               v0_x_0 = {0x4, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 4, (string) "........"
+5 [State 5] Switching from state 5 to state 4
+5 [State 4] BaseInstructions: Killing state 4
+5 [State 4] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 4] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 4] TestCaseGenerator:               v0_x_0 = {0x3, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 3, (string) "........"
+5 [State 4] Switching from state 4 to state 3
+5 [State 3] BaseInstructions: Killing state 3
+5 [State 3] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 3] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 3] TestCaseGenerator:               v0_x_0 = {0x2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 2, (string) "........"
+5 [State 3] Switching from state 3 to state 2
+5 [State 2] BaseInstructions: Killing state 2
+5 [State 2] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 2] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 2] TestCaseGenerator:               v0_x_0 = {0x1, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}; (int64_t) 1, (string) "........"
+All states were terminated
+Terminating node id 0 (instance slot 0)
+Engine terminated.

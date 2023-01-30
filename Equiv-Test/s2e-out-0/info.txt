@@ -1,0 +1,214 @@
+Creating plugin CorePlugin
+Creating plugin BaseInstructions
+Creating plugin HostFiles
+Creating plugin Vmi
+Creating plugin MemUtils
+Creating plugin WebServiceInterface
+Creating plugin ExecutionTracer
+Creating plugin ModuleTracer
+Creating plugin KeyValueStore
+Creating plugin TranslationBlockCoverage
+Creating plugin ModuleExecutionDetector
+Creating plugin ForkLimiter
+Creating plugin ProcessExecutionDetector
+Creating plugin ModuleMap
+Creating plugin MemoryMap
+Creating plugin MultiSearcher
+Creating plugin CUPASearcher
+Creating plugin StaticFunctionModels
+Creating plugin TestCaseGenerator
+Creating plugin Screenshot
+Creating plugin LinuxMonitor
+Creating plugin LuaBindings
+Creating plugin LuaCoreEvents
+Initializing LuaBindings
+Initializing LuaCoreEvents
+LuaCoreEvents: Registering instrumentation for core signals
+Initializing Screenshot
+Initializing TestCaseGenerator
+Initializing MultiSearcher
+Initializing ForkLimiter
+Initializing KeyValueStore
+Initializing ExecutionTracer
+Initializing WebServiceInterface
+Initializing Vmi
+Initializing HostFiles
+Initializing BaseInstructions
+Initializing LinuxMonitor
+Initializing ModuleMap
+Initializing ProcessExecutionDetector
+Initializing MemoryMap
+Initializing MemUtils
+Initializing ModuleExecutionDetector
+Initializing StaticFunctionModels
+StaticFunctionModels: Model count: 0
+Initializing CUPASearcher
+CUPASearcher: CUPASearcher is now active
+Initializing TranslationBlockCoverage
+Initializing ModuleTracer
+Initializing CorePlugin
+[Z3] Initializing
+0 [State 0] Created initial state
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7fd401c13000 elf_entry=0x7fd401c13000 interp_load_addr=0x7fd401c13000
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7f967e45f000 elf_entry=0x7f967e45f000 interp_load_addr=0x7f967e45f000
+3 [State 0] BaseInstructions: Message from guest (0xffffc9000050ba30): elf_interpreter=/lib64/ld-linux-x86-64.so.2 interp_map_addr=7f4d69e15000 elf_entry=0x7f4d69e15000 interp_load_addr=0x7f4d69e15000
+3 [State 0] ModuleExecutionDetector: loading id mod_0
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Process map:
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07d000 Limit=0x55a61a07e000 Offset=0000000000 Perms=0x1 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07e000 Limit=0x55a61a07f000 Offset=0x00001000 Perms=0x5 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a07f000 Limit=0x55a61a082000 Offset=0x00002000 Perms=0x3 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x55a61a6dc000 Limit=0x55a61a6fd000 Offset=0000000000 Perms=0x3 Name=[heap]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69440000 Limit=0x7f4d69459000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69658000 Limit=0x7f4d6965a000 Offset=0x00018000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6965a000 Limit=0x7f4d69671000 Offset=0000000000 Perms=0x5 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69870000 Limit=0x7f4d69872000 Offset=0x00016000 Perms=0x3 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69872000 Limit=0x7f4d69875000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69a74000 Limit=0x7f4d69a76000 Offset=0x00002000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69a76000 Limit=0x7f4d69c0b000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69e0b000 Limit=0x7f4d69e11000 Offset=0x00195000 Perms=0x3 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d69e15000 Limit=0x7f4d69e38000 Offset=0000000000 Perms=0x5 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a02c000 Limit=0x7f4d6a02e000 Offset=0000000000 Perms=0x1 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a02e000 Limit=0x7f4d6a032000 Offset=0x00002000 Perms=0x5 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a032000 Limit=0x7f4d6a033000 Offset=0x00006000 Perms=0x1 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a034000 Limit=0x7f4d6a036000 Offset=0x00007000 Perms=0x3 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7f4d6a038000 Limit=0x7f4d6a03a000 Offset=0x00023000 Perms=0x3 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacae3000 Limit=0x7ffcacb04000 Offset=0000000000 Perms=0x3 Name=[stack]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacb4c000 Limit=0x7ffcacb4e000 Offset=0000000000 Perms=0x1 Name=[vvar]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0x7ffcacb4e000 Limit=0x7ffcacb50000 Offset=0000000000 Perms=0x5 Name=[vdso]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02930): Base=0xffffffffff600000 Limit=0xffffffffff601000 Offset=0000000000 Perms=0x5 Name=[vsyscall]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [heap]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [stack]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vvar]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vdso]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Could not load [vsyscall]
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Dumping modules
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /home/s2e/factorial - entry_point=0x1060 loadable_phdr_num=4
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07d000 Size=0x00001000 Offset=0x00000000 Perms=0x01 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07e000 Size=0x00001000 Offset=0x00001000 Perms=0x05 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x55a61a07f000 Size=0x00003000 Offset=0x00002000 Perms=0x03 Name=/home/s2e/factorial
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libz.so.1.2.8 - entry_point=0x21c0 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69440000 Size=0x00019000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69658000 Size=0x00002000 Offset=0x00018000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libz.so.1.2.8
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /usr/lib/x86_64-linux-gnu/libelf-0.168.so - entry_point=0x2f90 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6965a000 Size=0x00017000 Offset=0x00000000 Perms=0x05 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69870000 Size=0x00002000 Offset=0x00016000 Perms=0x03 Name=/usr/lib/x86_64-linux-gnu/libelf-0.168.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libdl-2.24.so - entry_point=0xd80 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69872000 Size=0x00003000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69a74000 Size=0x00002000 Offset=0x00002000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libdl-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/libc-2.24.so - entry_point=0x20400 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69a76000 Size=0x00195000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69e0b000 Size=0x00006000 Offset=0x00195000 Perms=0x03 Name=/lib/x86_64-linux-gnu/libc-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /lib/x86_64-linux-gnu/ld-2.24.so - entry_point=0xc20 loadable_phdr_num=2
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d69e15000 Size=0x00023000 Offset=0x00000000 Perms=0x05 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a038000 Size=0x00002000 Offset=0x00023000 Perms=0x03 Name=/lib/x86_64-linux-gnu/ld-2.24.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920): Module /home/s2e/guest-tools64/s2e.so - entry_point=0x2410 loadable_phdr_num=4
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a02c000 Size=0x00002000 Offset=0x00000000 Perms=0x01 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a02e000 Size=0x00004000 Offset=0x00002000 Perms=0x05 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a032000 Size=0x00001000 Offset=0x00006000 Perms=0x01 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02920):    Base=0x7f4d6a034000 Size=0x00002000 Offset=0x00007000 Perms=0x03 Name=/home/s2e/guest-tools64/s2e.so
+3 [State 0] BaseInstructions: Message from guest (0x7ffcacb02960): Skipping /home/s2e/factorial, because it was already notified by the kernel
+3 [State 0] BaseInstructions: Inserted symbolic data @0x7ffcacb02f08 of size 0x8: x='\x00\x00\x00\x00\x00\x00\x00\x00' pc=0x55a61a07e1e4
+3 [State 0] Forking state 0 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 0
+    state 1
+3 [State 0] BaseInstructions: Killing state 0
+3 [State 0] Terminating state: State was terminated by opcode
+            message: "Assertion failed: f1 == f2"
+            status: 0x0
+3 [State 0] TestCaseGenerator: generating test case at address 0x55a61a07e218
+3 [State 0] Switching from state 0 to state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 2
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 3
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 4
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 5
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 6
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 7
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 8
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 9
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 10
+    state 1
+3 [State 1] Forking state 1 at pc = 0x55a61a07e28b at pagedir = 0xd9e7000
+    state 11
+    state 1
+3 [State 1] BaseInstructions: Killing state 1
+3 [State 1] Terminating state: State was terminated by opcode
+            message: "Assertion failed: f1 == f2"
+            status: 0x0
+3 [State 1] TestCaseGenerator: generating test case at address 0x55a61a07e218
+3 [State 1] Switching from state 1 to state 11
+4 [State 11] BaseInstructions: Killing state 11
+4 [State 11] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 11] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 11] Switching from state 11 to state 10
+4 [State 10] BaseInstructions: Killing state 10
+4 [State 10] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 10] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 10] Switching from state 10 to state 9
+4 [State 9] BaseInstructions: Killing state 9
+4 [State 9] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+4 [State 9] TestCaseGenerator: generating test case at address 0x55a61a07e218
+4 [State 9] Switching from state 9 to state 8
+5 [State 8] BaseInstructions: Killing state 8
+5 [State 8] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 8] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 8] Switching from state 8 to state 7
+5 [State 7] BaseInstructions: Killing state 7
+5 [State 7] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 7] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 7] Switching from state 7 to state 6
+5 [State 6] BaseInstructions: Killing state 6
+5 [State 6] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 6] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 6] Switching from state 6 to state 5
+5 [State 5] BaseInstructions: Killing state 5
+5 [State 5] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 5] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 5] Switching from state 5 to state 4
+5 [State 4] BaseInstructions: Killing state 4
+5 [State 4] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 4] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 4] Switching from state 4 to state 3
+5 [State 3] BaseInstructions: Killing state 3
+5 [State 3] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 3] TestCaseGenerator: generating test case at address 0x55a61a07e218
+5 [State 3] Switching from state 3 to state 2
+5 [State 2] BaseInstructions: Killing state 2
+5 [State 2] Terminating state: State was terminated by opcode
+            message: "Success"
+            status: 0x0
+5 [State 2] TestCaseGenerator: generating test case at address 0x55a61a07e218

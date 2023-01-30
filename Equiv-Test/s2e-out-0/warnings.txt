@@ -1,0 +1,4 @@
+WebServiceInterface: SeedSearcher not present, seed statistics will not be available
+WebServiceInterface: Recipe plugin not present, recipe statistics will not be available
+All states were terminated
+Terminating node id 0 (instance slot 0)
