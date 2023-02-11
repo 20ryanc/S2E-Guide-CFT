@@ -31,7 +31,7 @@ Follow-up on tutorial from https://adrianherrera.github.io/post/google-ctf-2016/
     - There is a variable name "iVar2" that where iVar2 = (size - num_line - 1) / (num_line) = (34 - 5 - 1) / 5 = 6. This made me suspect that each of the five lines have six characters. Thus, it has a good chance of looking like this "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx".
   - S2e has ways to make symbolic files, however, it requires the symbolic file to be inputted as an argument. This argument is symbolic and will guide the program to a symbolic file located in a ramdisk. We therefore need another way to inject the symbolic file.
   - Solution is the hook native functions by modifying main.c located in (s2e/source/guest/linux/s2e.so) which is complied into s2e.so. We can hook three functions fopen, ftell, and fread.
-    - fopen: I copied a dummy file with a matching input file name using s2ecmd and hooked fopen just to make sure the file is present
+    - fopen: I copied a dummy file with a matching input file name using s2ecmd and hooked fopen just to make sure the file is present. In theory we don't need the file and we can just return any non-null pointer.
     - ftell: the dummy file has no content therefore has no length. To make sure that the size is 34, I made ftell return 34.
     - fread: fread will take in a void buffer to take in the file content, we can make this buffer symbolic. It is important to provide an initial guess using memcpy to the symbolic content or else it will take forever to get the flag. 
   - A plugin will trace the symbolic input into the file until a successful PC address is hit. If a bad address is hit, then it will end the branch. This exploits the binary file's construction to allow early stopping.
