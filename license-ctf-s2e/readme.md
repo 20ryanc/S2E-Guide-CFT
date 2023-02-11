@@ -42,7 +42,7 @@ Follow-up on tutorial from https://adrianherrera.github.io/post/google-ctf-2016/
 # Challenges<a name="challenges"></a>
  - Upgraded from Ubuntu 20.03 to Ubuntu 22.04 --> everything broke.
    - Not obvious that s2e broke. Modified Bootstrap.sh and command ran as usual, did not suspect VM issue. Only figured out after running a previously working project.
-   - Modified S2E.so to allow for symbolic inject by hooking fopen but there was early termination with QEMU signal 15 error.
+   - Modified S2E.so to allow for symbolic inject by hooking fopen but there was early termination with QEMU signal 15 error without ever getting into fopen. I then modified libc_start_main to display a message. To my horror nothing happened. That's when I figured out something broke.
  - Reinstalled Ubuntu 22.04 but ran into early termination. Early termination error was due to QEMU not being fully complied error descriped below
  - Ubuntu 22.04 wasn't stable enough for me to deem it good for research so I reinstalled and downgraded it to 20.03.
  - Clean Install of S2E on Ubuntu will run into issues installing QEMU if your network has firewall where addresses with git:// will sometimes be blocked. To fix this issue use https and to override git's behavior. `git config --global url."https://".insteadOf git://`
