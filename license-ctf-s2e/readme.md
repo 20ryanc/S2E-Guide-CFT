@@ -40,12 +40,13 @@ Follow-up on tutorial from https://adrianherrera.github.io/post/google-ctf-2016/
   - The file content was written into an actual file using python. I then ran the script with the file to produce the flag: ASIS{8d2cc30143831881f94cb05dcf0b83e0}
 
 # Challenges<a name="challenges"></a>
- - Upgraded from Ubuntu 20.03 to Ubuntu 22.04 --> everything broke.
-   - Not obvious that s2e broke. Modified Bootstrap.sh and command ran as usual, did not suspect VM issue. Only figured out after running a previously working project.
-   - Modified S2E.so to allow for symbolic inject by hooking fopen but there was early termination with QEMU signal 15 error without ever getting into fopen. I then modified libc_start_main to display a message. To my horror nothing happened. That's when I figured out something broke.
+ - Upgraded from Ubuntu 20.03 to Ubuntu 22.04 --> OS and disk got corrupted. I reinstalled Ubuntu 22.04.
  - Reinstalled Ubuntu 22.04 but ran into early termination. Early termination error was due to QEMU not being fully complied error descriped below
- - Ubuntu 22.04 wasn't stable enough for me to deem it good for research so I reinstalled and downgraded it to 20.03.
- - Clean Install of S2E on Ubuntu will run into issues installing QEMU if your network has firewall where addresses with git:// will sometimes be blocked. To fix this issue use https and to override git's behavior. `git config --global url."https://".insteadOf git://`
+   - Not obvious that s2e broke. Modified Bootstrap.sh and command ran as usual, did not suspect VM issue.
+   - Modified S2E.so to allow for symbolic inject by hooking fopen but there was early termination with QEMU signal 15 error without ever getting into fopen. I then modified libc_start_main to display a message. To my horror nothing happened.
+   - To be certain that s2e broke, I ran a previous project and saw signal 15 error.
+ - After some research Ubuntu 22.04 wasn't stable enough for me to deem it good for research so I reinstalled and downgraded it to 20.03.
+ - Clean Build of S2E on Ubuntu will run into issues installing QEMU if your network has firewall where addresses with git:// will sometimes be blocked. To fix this issue use https and override git's behavior. `git config --global url."https://".insteadOf git://`
    - source/qemu/scripts contains git-submodule.sh that can be ran to maunally build qemu --> did not find it to be useful
  - When extracting the solution from the symbolic file on success, the location of the concrete solution is on the last vector of the result. I was getting it from the first vector following the previous tutorial and was getting nonsense solutions. I figured this out by looking at the source code for the test case generator plugin. 
 
