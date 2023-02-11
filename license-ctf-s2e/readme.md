@@ -8,6 +8,7 @@
 - [license-ctf-s2e](#ampopt)
   - [Contents](#contents)
   - [Overview](#overview)
+  - [Challenges](#challenges)
   - [Future](#future)
 
 <!-- mdformat-toc end -->
@@ -37,6 +38,16 @@ Follow-up on tutorial from https://adrianherrera.github.io/post/google-ctf-2016/
   - A plugin will trace the symbolic input into the file until a successful PC address is hit. If a bad address is hit, then it will end the branch. This exploits the binary file's construction to allow early stopping.
   - Indeed the file did look something like "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx" and we were able to extract the file content.
   - The file content was written into an actual file using python. I then ran the script with the file to produce the flag: ASIS{8d2cc30143831881f94cb05dcf0b83e0}
+
+# Challenges<a name="challenges"></a>
+ - Upgraded from Ubuntu 20.03 to Ubuntu 22.04 --> everything broke.
+   - Not obvious that s2e broke. Modified Bootstrap.sh and command ran as usual, did not suspect VM issue. Only figured out after running a previously working project.
+   - Modified S2E.so to allow for symbolic inject by hooking fopen but there was early termination with QEMU signal 15 error.
+ - Reinstalled Ubuntu 22.04 but ran into early termination. Early termination error was due to QEMU not being fully complied error descriped below
+ - Ubuntu 22.04 wasn't stable enough for me to deem it good for research so I reinstalled and downgraded it to 20.03.
+ - Clean Install of S2E on Ubuntu will run into issues installing QEMU if your network has firewall where addresses with git:// will sometimes be blocked. To fix this issue use https and to override git's behavior. `git config --global url."https://".insteadOf git://`
+   - source/qemu/scripts contains git-submodule.sh that can be ran to maunally build qemu --> did not find it to be useful
+ - When extracting the solution from the symbolic file on success, the location of the concrete solution is on the last vector of the result. I was getting it from the first vector following the previous tutorial and was getting nonsense solutions. I figured this out by looking at the source code for the test case generator plugin. 
 
 ## Future<a name="future"></a>
 
