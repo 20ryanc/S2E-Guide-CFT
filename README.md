@@ -1,5 +1,5 @@
 # S2E-Guide-CFT
-Attempt at an introduction to S2E through google CFT.  
+Attempt at an introduction to S2E through CFT.  
 
 # Summary of Issues Encountered for License-CTF Challenge
  - Upgraded from Ubuntu 20.03 to Ubuntu 22.04 --> everything broke.
