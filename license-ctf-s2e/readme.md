@@ -40,6 +40,7 @@ Follow-up on tutorial from https://adrianherrera.github.io/post/google-ctf-2016/
 
 ## Future<a name="future"></a>
 
+ - The Angr solution involves getting the flag directly from memory. According to the source code of S2E the information should definitely be contained in S2EExecutionState but I have yet to figure out how to get contents from registers and memory. This may be an interesting thing to figure out. 
  - I intend to solve one or two more CTF problem from the angr example page, one of which will take an input from stdin
  - After that I will do some analysis on malware binaries. 
 
